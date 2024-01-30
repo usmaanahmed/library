@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post" action="/book" >
+        <div>
+            <label for="isdn">ISDN</label>
+            <input type="text" name="isdn">
+        </div>
+        <div>
+            <label for="tile">Title</label>
+            <input type="text" name="title">
+        </div>
+        <select name="category" id="">
+            <option value="islamic">Islamic</option>
+            <option value="literature">Literature</option>
+        </select>
+        <div>
+            Mode: <input type="radio" name="mode" value="online">Online
+                 <input type="radio" name="mode" value="hard">Hard
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

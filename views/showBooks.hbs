@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Book Records</h2>
+    <hr>
+    <small>Filter By Mode</small>
+    <form action="/search" method="get">
+        <select name="filterMode" id="">
+        <option value="online">Online</option>
+        <option value="hard">Hard</option>
+        <input type="submit">
+    </select>
+    </form>
+    <table border="1">
+        <tr>
+            <th>ISDN</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Mode</th>
+        </tr>
+        {{#each bookData}}
+            <tr>
+                <td>{{this.isdn}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.category}}</td>
+                <td>{{this.mode}}</td>
+                <td><a href="/book/{{this._id}}">Edit</a></td>
+                <td><a href="/book/del/{{this._id}}">Delete</a></td>
+            </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
